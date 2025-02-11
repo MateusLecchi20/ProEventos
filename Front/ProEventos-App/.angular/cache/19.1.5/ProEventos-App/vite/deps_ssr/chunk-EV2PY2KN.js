@@ -2,7 +2,7 @@ import { createRequire } from 'module';const require = createRequire(import.meta
 import {
   NoopAnimationsModule,
   provideNoopAnimations
-} from "./chunk-MYLEEFTG.js";
+} from "./chunk-EFFY6BJM.js";
 import {
   BrowserDomAdapter,
   BrowserModule,
@@ -16984,4 +16984,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-MMSTXOK2.js.map
+//# sourceMappingURL=chunk-EV2PY2KN.js.map
