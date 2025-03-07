@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { TituloComponent } from "../../shared/titulo/titulo.component";
+import { TituloComponent } from "@app/shared/titulo/titulo.component";
 import { RouterOutlet } from '@angular/router';
 
 @Component({

@@ -1,9 +1,9 @@
 import { Component, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { Evento } from '../../../models/Evento';
-import { EventoService } from '../../../services/evento.service';
+import { Evento } from '@app/models/Evento';
+import { EventoService } from '@app/services/evento.service';
 import { ToastrService } from 'ngx-toastr';
-import { DateTimeFormatPipe } from "../../../helpers/DateTimeFormat.pipe";
+import { DateTimeFormatPipe } from "@app/helpers/DateTimeFormat.pipe";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
