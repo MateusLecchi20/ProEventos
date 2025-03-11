@@ -26,6 +26,6 @@ export const appConfig: ApplicationConfig = {
       preventDuplicates: true,
       progressBar: true
     })),
-    importProvidersFrom(NgxSpinnerModule.forRoot())
+    importProvidersFrom(NgxSpinnerModule.forRoot()),
   ]
 };

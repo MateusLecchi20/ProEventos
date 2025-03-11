@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-evento-lista',
@@ -31,6 +32,7 @@ export class EventoListaComponent {
   modalRef?: BsModalRef;
   public eventos: Evento[] = [];
   public eventosFiltrados: Evento[] = [];
+  public eventoId = 0;
 
   public widthImg: number = 50;
   public marginImg: number = 2;
@@ -58,19 +60,21 @@ export class EventoListaComponent {
   constructor(private eventoService: EventoService,
               private modalService: BsModalService,
               private toastr: ToastrService,
-              private router: Router
-              // private spinner: NgxSpinnerService
+              private router: Router,
+              private spinner: NgxSpinnerService
   ) { }
 
   public ngOnInit(): void {
-    this.getEventos();
+    this.carregarEventos();
   }
 
   public alterarImagem(): void {
     this.showimg = !this.showimg;
   }
 
-  public getEventos(): void {
+  public carregarEventos(): void {
+    this.spinner.show();
+
     this.eventoService.getEventos().subscribe({
       next: (eventos: Evento[]) => {
         this.eventos = eventos;
@@ -82,18 +86,31 @@ export class EventoListaComponent {
           this.toastr.clear();         
         }, 4000);
       },
-      complete: () => {
-      }
-    });
+    }).add(() => this.spinner.hide());
   }
 
-  openModal(template: TemplateRef<any>){
+  openModal(event: any, template: TemplateRef<any>, eventoId: number): void {
+    event.stopPropagation();
+    this.eventoId = eventoId;
     this.modalRef = this.modalService.show(template, {class: 'modal-sm'})
   }
 
   confirm(): void {
     this.modalRef?.hide();
-    this.toastr.success('O Evento foi deletado com Sucesso', 'Deletado!');
+    this.spinner.show();
+    
+    this.eventoService.deleteEvento(this.eventoId).subscribe({
+      next: (result: any) => {
+        if (result.message === 'Deletado') {
+          this.toastr.success('O Evento foi deletado com Sucesso.', 'Deletado!');
+          this.carregarEventos();
+        }
+      },
+      error: (error: any) => {
+        console.error(error);
+        this.toastr.error(`Erro ao tentar deletar o evento ${this.eventoId}`, 'Erro');
+      },
+    }).add(() => this.spinner.hide());
   }
 
   decline(): void {
