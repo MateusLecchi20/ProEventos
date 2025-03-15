@@ -6,6 +6,7 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { EventoService } from './services/evento.service';
+import { LoteService } from './services/lote.service';
 import { BsModalService, ModalModule } from 'ngx-bootstrap/modal';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
@@ -18,6 +19,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     provideAnimations(),
     EventoService,
+    LoteService,
     BsModalService,
     importProvidersFrom(ModalModule.forRoot()),
     importProvidersFrom(ToastrModule.forRoot({
@@ -26,6 +28,6 @@ export const appConfig: ApplicationConfig = {
       preventDuplicates: true,
       progressBar: true
     })),
-    importProvidersFrom(NgxSpinnerModule.forRoot()),
+    importProvidersFrom(NgxSpinnerModule.forRoot())
   ]
 };

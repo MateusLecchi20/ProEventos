@@ -47,7 +47,7 @@ import {
   viLocale,
   zhCnLocale
 } from "./chunk-5GCUH7LU.js";
-import "./chunk-YHCV7DAQ.js";
+import "./chunk-ANGF2IQY.js";
 export {
   arLocale,
   bgLocale,

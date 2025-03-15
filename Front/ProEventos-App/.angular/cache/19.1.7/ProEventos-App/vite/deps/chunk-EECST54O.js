@@ -1,7 +1,6 @@
-import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   DOCUMENT
-} from "./chunk-7KCBGUVE.js";
+} from "./chunk-FKZONEIK.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -13,7 +12,7 @@ import {
   setClassMetadata,
   ɵɵdefineInjectable,
   ɵɵinject
-} from "./chunk-AXF5VKNL.js";
+} from "./chunk-M7ZXI6WY.js";
 
 // node_modules/@angular/animations/fesm2022/animations.mjs
 var AnimationMetadataType;
@@ -544,4 +543,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-7GBMCLL5.js.map
+//# sourceMappingURL=chunk-EECST54O.js.map

@@ -1,0 +1,49 @@
+.iconesSociais {
+  color: rgb(94, 94, 94);
+}
+
+.capitalize {
+  text-transform: capitalize;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  color: silver;
+}
+
+.tab-pane {
+  padding: 20px 8px 8px;
+  border-top: 0px;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  border-left: 1px solid #dee2e6;
+}
+
+.card-evento {
+  position: sticky;
+  --default-height: 25px;
+  top: var(--default-height);
+}
+
+legend {
+  display: flex;
+  justify-content: flex-end; /* Mantém o botão no canto direito */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 10px 0; /* Mantém um espaçamento para não grudar na linha */
+  height: 50px; /* Define uma altura mínima para ajudar no alinhamento vertical */
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-top: 10px; /* Dá um respiro maior entre os elementos */
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}

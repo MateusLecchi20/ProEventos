@@ -1,7 +1,8 @@
+import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-BKMQYTIH.js";
+} from "./chunk-QZ2BXLJP.js";
 import {
   ApplicationRef,
   ComponentFactoryResolver$1,
@@ -18,18 +19,15 @@ import {
   setClassMetadata,
   ɵɵdefineInjectable,
   ɵɵinject
-} from "./chunk-YKKSFAQN.js";
+} from "./chunk-OVWDL5OB.js";
 import {
-  Subject,
-  animationFrameScheduler,
-  fromEvent,
-  merge,
-  of
-} from "./chunk-KCJWDZ6W.js";
+  require_cjs
+} from "./chunk-3AYOO7D2.js";
 import {
   __spreadProps,
-  __spreadValues
-} from "./chunk-WDMUDEB6.js";
+  __spreadValues,
+  __toESM
+} from "./chunk-ANGF2IQY.js";
 
 // node_modules/ngx-bootstrap/utils/fesm2022/ngx-bootstrap-utils.mjs
 var Trigger = class {
@@ -231,6 +229,7 @@ function warnOnce(msg) {
 }
 
 // node_modules/ngx-bootstrap/positioning/fesm2022/ngx-bootstrap-positioning.mjs
+var import_rxjs = __toESM(require_cjs(), 1);
 var MapPlacementInToRL;
 (function(MapPlacementInToRL2) {
   MapPlacementInToRL2["top"] = "top";
@@ -1009,16 +1008,16 @@ function positionElements(hostElement, targetElement, placement, appendToBody, o
 }
 var PositioningService = class _PositioningService {
   constructor(ngZone, rendererFactory, platformId) {
-    this.update$$ = new Subject();
+    this.update$$ = new import_rxjs.Subject();
     this.positionElements = /* @__PURE__ */ new Map();
     this.isDisabled = false;
     if (isPlatformBrowser(platformId)) {
       ngZone.runOutsideAngular(() => {
-        this.triggerEvent$ = merge(fromEvent(window, "scroll", {
+        this.triggerEvent$ = (0, import_rxjs.merge)((0, import_rxjs.fromEvent)(window, "scroll", {
           passive: true
-        }), fromEvent(window, "resize", {
+        }), (0, import_rxjs.fromEvent)(window, "resize", {
           passive: true
-        }), of(0, animationFrameScheduler), this.update$$);
+        }), (0, import_rxjs.of)(0, import_rxjs.animationFrameScheduler), this.update$$);
         this.triggerEvent$.subscribe(() => {
           if (this.isDisabled) {
             return;
@@ -1443,4 +1442,4 @@ ngx-bootstrap/utils/fesm2022/ngx-bootstrap-utils.mjs:
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-6U74TVB3.js.map
+//# sourceMappingURL=chunk-3FOWY2HP.js.map

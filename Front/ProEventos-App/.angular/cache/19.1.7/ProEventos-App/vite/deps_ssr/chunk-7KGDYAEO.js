@@ -2,16 +2,16 @@ import { createRequire } from 'module';const require = createRequire(import.meta
 import {
   NoopAnimationsModule,
   provideNoopAnimations
-} from "./chunk-AXB2NO5J.js";
+} from "./chunk-ZJRJZWCP.js";
 import {
   BrowserDomAdapter,
   BrowserModule,
   EVENT_MANAGER_PLUGINS,
   EventManagerPlugin
-} from "./chunk-XXAIG4AP.js";
+} from "./chunk-AWSMJKJN.js";
 import {
   HTTP_ROOT_INTERCEPTOR_FNS
-} from "./chunk-BFNIP6LA.js";
+} from "./chunk-XXOHXKWP.js";
 import {
   DOCUMENT,
   NullViewportScroller,
@@ -21,7 +21,7 @@ import {
   XhrFactory,
   getDOM,
   setRootDomAdapter
-} from "./chunk-7KCBGUVE.js";
+} from "./chunk-QZ2BXLJP.js";
 import {
   ALLOW_MULTIPLE_PLATFORMS,
   APP_ID,
@@ -55,14 +55,14 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-AXF5VKNL.js";
+} from "./chunk-OVWDL5OB.js";
 import {
   require_cjs
-} from "./chunk-T4XHMJL2.js";
+} from "./chunk-3AYOO7D2.js";
 import {
   __async,
   __toESM
-} from "./chunk-YHCV7DAQ.js";
+} from "./chunk-ANGF2IQY.js";
 
 // node_modules/@angular/platform-server/fesm2022/platform-server.mjs
 var import_rxjs = __toESM(require_cjs(), 1);
@@ -16416,7 +16416,7 @@ var ServerXhr = class _ServerXhr {
       if (!this.xhrImpl) {
         const {
           default: xhr
-        } = yield import("./xhr2-TXIMV6CV.js");
+        } = yield import("./xhr2-HQX5CY5B.js");
         this.xhrImpl = xhr;
       }
     });
@@ -16986,4 +16986,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-CKRRNSO2.js.map
+//# sourceMappingURL=chunk-7KGDYAEO.js.map
