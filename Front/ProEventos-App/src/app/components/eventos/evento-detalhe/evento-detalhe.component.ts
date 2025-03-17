@@ -165,7 +165,7 @@ export class EventoDetalheComponent implements OnInit, AfterViewInit {
   }
 
   public mudarValorData(value: Date, indice: number, campo: string): void {
-    this.lotes.value[indice]['campo'] = value;
+    this.lotes.at(indice).get(campo)?.setValue(value);
   }
 
   public retornaTituloLote(nome: string): string {
