@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { environment } from '@environments/environment';
 
 @Component({
   selector: 'app-evento-lista',
@@ -70,6 +71,12 @@ export class EventoListaComponent {
 
   public alterarImagem(): void {
     this.showimg = !this.showimg;
+  }
+
+  public mostraImagem(imagemURL: string): string {
+    return (imagemURL !== '')
+      ? `${environment.apiURL}resources/images/${imagemURL}`
+      : 'assets/img/semImagem.png';
   }
 
   public carregarEventos(): void {
