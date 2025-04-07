@@ -1,4 +1,5 @@
 <app-titulo [titulo]="'Perfil'" [iconClass]="'fa fa-address-card'"></app-titulo>
+
 <div class="card rounded shadow-sm">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="row p-3">
@@ -142,15 +143,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <div class="card-footer">
-                    <div class="d-flex justify-content-between mt-3">
-                        <button (click)="resetForm($event)" class="btn btn-outline-secondary border">
-                            Cancelar Alteração
-                        </button>
-                        <button class="btn btn-success">Salvar Alteração</button>
-                    </div>
-                </div>
+        <div class="card-footer">
+            <div class="d-flex justify-content-between mt-3">
+                <button (click)="resetForm($event)" class="btn btn-outline-secondary border">
+                    Cancelar Alteração
+                </button>
+                <button class="btn btn-success">Salvar Alteração</button>
             </div>
         </div>
     </form>

@@ -34,6 +34,9 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+ProEventos.db-wal
+ProEventos.db-shm
+ProEventos.db
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -518,3 +521,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+Back/src/ProEventos.API/ProEventos.db

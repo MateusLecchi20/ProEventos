@@ -1,18 +1,5 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
-  ComponentLoaderFactory,
-  OnChange,
-  PlacementForBs5,
-  PositioningService,
-  getBsVer,
-  parseTriggers,
-  warnOnce
-} from "./chunk-3FOWY2HP.js";
-import {
-  NG_VALIDATORS,
-  NG_VALUE_ACCESSOR
-} from "./chunk-325F6PNJ.js";
-import {
   endOf,
   formatDate,
   getDay,
@@ -37,6 +24,19 @@ import {
   startOf,
   utcAsLocal
 } from "./chunk-5GCUH7LU.js";
+import {
+  ComponentLoaderFactory,
+  OnChange,
+  PlacementForBs5,
+  PositioningService,
+  getBsVer,
+  parseTriggers,
+  warnOnce
+} from "./chunk-3FOWY2HP.js";
+import {
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR
+} from "./chunk-325F6PNJ.js";
 import {
   animate,
   state,
